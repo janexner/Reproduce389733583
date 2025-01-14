@@ -4,12 +4,15 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import com.exner.tools.reproduce389733583.ui.wrapper.AskForPasswordWrapper
 import com.ramcosta.composedestinations.annotation.Destination
 import com.ramcosta.composedestinations.annotation.RootGraph
 import com.ramcosta.composedestinations.generated.destinations.MainScreenDestination
 import com.ramcosta.composedestinations.navigation.DestinationsNavigator
 
-@Destination<RootGraph>
+@Destination<RootGraph>(
+    wrappers = [AskForPasswordWrapper::class]
+)
 @Composable
 fun ProtectedScreen(
     navigator: DestinationsNavigator
